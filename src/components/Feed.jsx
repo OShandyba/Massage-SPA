@@ -12,11 +12,20 @@ const MyTypography = styled(Typography)({
     marginLeft: '10px'
 })
 
+
 const Feed = () => {
     return (
         <Box flex={8} >
-            <Typography sx={{ fontSize: '2rem', textAlign: 'center', paddingLeft: '30%', margin: '20px', color: '#33004d' }} >Массаж - здоровье души и тела</Typography>
-            <Stack direction='row' spacing={2} display='flex' sx={{ marginRight: '20px', justifyContent: { xs: 'center', sm: 'center', md: 'space-between' } }} >
+            <Typography sx={{ fontSize: '2rem', textAlign: 'center', paddingLeft: { md: '25%', sm: '10%' }, margin: '20px', color: '#33004d' }} >Массаж - здоровье души и тела</Typography>
+
+            <Stack
+                direction='row'
+                spacing={2}
+                sx={{
+                    marginRight: '20px',
+                    justifyContent: { xs: 'center', sm: 'center', md: 'space-between' }
+                }} >
+
                 <Box justifyContent='center'>
                     <MyTypography>
                         Массаж имеет благоприятное действие на весь организм человека в целом: повышает мышечный тонус, способствует улучшению циркуляции крови и оттоку лимфы, а это, в свою очередь, снабжает органы питательными веществами, улучшает процессы обмена веществ. Но его эффективность зависит от правильного профессионального подхода в диагностике заболевания, подборе нужной методики, только тогда он принесет максимальный положительный эффект.
@@ -26,7 +35,14 @@ const Feed = () => {
                     <Avatar alt='thm' src={ImgFeed} sx={{ margin: '10px 30px 10px 10px', height: '100%', width: '100%', borderRadius: '2%', }} />
                 </Box>
             </Stack>
-            <Stack direction='row' spacing={2} display='flex' sx={{ margin: '40px 20px 0 0', justifyContent: { xs: 'center', sm: 'center', md: 'space-between' } }} >
+
+            <Stack
+                direction='row'
+                spacing={2}
+                sx={{
+                    marginRight: '20px',
+                    justifyContent: { xs: 'center', sm: 'center', md: 'space-between', margin: '40px 20px 0 0' }
+                }} >
                 <Box sx={{ maxHeight: '600px', maxWidth: '1000px', display: { xs: 'none', sm: 'none', md: 'block' } }} >
                     <Avatar alt='thm' src={ImgFeed1} sx={{ margin: '10px 30px 10px 10px', height: '100%', width: '100%', borderRadius: '2%', }} />
                 </Box>
@@ -36,7 +52,14 @@ const Feed = () => {
                     </MyTypography>
                 </Box>
             </Stack>
-            <Stack direction='row' spacing={2} display='flex' sx={{ margin: '40px 20px 10px 0', justifyContent: { xs: 'center', sm: 'center', md: 'space-between' } }} >
+            <Stack
+                direction='row'
+                spacing={2}
+                sx={{
+                    marginRight: '20px',
+                    justifyContent: { xs: 'center', sm: 'center', md: 'space-between', margin: '40px 20px 10px 0' }
+                }} >
+
                 <Box justifyContent='center'>
                     <MyTypography>
                         Массаж лица помогает расслабить мышцы, усилить кровообращение и нормализовать отток жидкостей в теле что в свою очередь поможет предотвратить появление морщин, сохранить овал лица и убрать отёки снять напряжение, поднять настроение и справиться с тревожностью. Как часто делать массаж лица? Оптимально — через день. Курс массажа составляет 6–10 сеансов. При необходимости можно повторить курс через 1–2 месяца.
