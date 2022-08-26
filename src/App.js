@@ -1,50 +1,84 @@
-import { Box, Stack } from '@mui/material';
+import { Box, IconButton, Stack } from '@mui/material';
+import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
 import Feed from './components/Feed'
 import Navbar from './components/Navbar'
 import Rightbar from './components/Rightbar'
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useState } from 'react';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import * as React from 'react'
 
-const light = {
-  palette: {
-    mode: "light",
-  },
-};
-
-const dark = {
-  palette: {
-    mode: "dark",
-  },
-};
-
+const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
 
 function App() {
-
-  const [isDarkTheme, setIsDarkTheme] = useState(false)
-
-  const changeTheme = () => {
-    setIsDarkTheme = (!isDarkTheme)
-  }
+  const theme = useTheme()
+  const colorMode = React.useContext(ColorModeContext)
 
   return (
-    <ThemeProvider theme={isDarkTheme ? createTheme(dark) : createTheme(light)}>
-      <Box
-        component='div'
-        // bgcolor={"Background.default"}
-        maxWidth='1440px'
-        margin='0 auto'
-      >
-        <Navbar />
-        <Stack
-          direction='row'
-          spacing={2}
-          justifyContent='space-between'
-          sx={{ padding: { md: '0 20px 0 100px', sx: '0 20px' } }}>
-          <Feed />
-          <Rightbar />
-        </Stack>
-      </Box>
-    </ThemeProvider>
+    <Box sx={{
+      display: 'flex',
+      width: '100%',
+      alignItems: 'center',
+      justifyContent: 'center',
+      bgcolor: 'background.default',
+      color: 'text.primary',
+    }}
+    >
+      {theme.palette.mode} mode
+      <IconButton onClick={colorMode.toggleColorMode} color='inherit'>
+        {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+      </IconButton>
+
+    </Box>
   )
 }
-export default App;
+
+export default function ToggleColorMode() {
+  const [mode, setMode] = React.useState('light');
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+      },
+    }),
+    [],
+  );
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode],
+  )
+
+  return (
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <Box
+          component='div'
+          bgcolor='background.default'
+          color='text.primary'
+          maxWidth='100%'
+          margin='0 auto'
+        >
+          <Navbar />
+          <Box>
+            <App />
+          </Box>
+          <Stack
+            direction='row'
+            spacing={2}
+            justifyContent='space-between'
+            sx={{ padding: { md: '0 20px 0 100px', sx: '0 20px' } }}>
+            <Feed />
+            <Rightbar />
+          </Stack>
+        </Box>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+
+  )
+}
+// export default App;

@@ -16,7 +16,7 @@ const MyTypography = styled(Typography)({
 const Feed = () => {
     return (
         <Box flex={8} >
-            <Typography sx={{ fontSize: '2rem', textAlign: 'center', paddingLeft: { md: '25%', sm: '10%' }, margin: '20px', color: '#33004d' }} >Массаж - здоровье души и тела</Typography>
+            <Typography sx={{ fontSize: '2rem', textAlign: 'center', paddingLeft: { md: '25%', sm: '10%' }, margin: '20px' }} >Массаж - здоровье души и тела</Typography>
 
             <Stack
                 direction='row'
