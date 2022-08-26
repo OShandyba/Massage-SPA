@@ -35,7 +35,10 @@ const Navbar = () => {
         <ThemeProvider theme={theme}>
             <AppBar
                 position="sticky"
-                sx={{ bgcolor: '#00cccc' }}>
+                sx={{
+                    bgcolor: '#00cccc',
+                    width: '100%'
+                }}>
                 <StyledToolbar>
                     <Icon>
                         <SpaIcon />

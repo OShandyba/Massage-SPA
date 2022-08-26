@@ -14,14 +14,18 @@ function App() {
   const colorMode = React.useContext(ColorModeContext)
 
   return (
-    <Box sx={{
-      display: 'flex',
-      width: '100%',
-      alignItems: 'center',
-      justifyContent: 'center',
-      bgcolor: 'background.default',
-      color: 'text.primary',
-    }}
+    <Box
+
+
+      sx={{
+        display: 'flex',
+        width: '80%',
+        alignItems: 'center',
+        justifyContent: 'left',
+        bgcolor: 'background.default',
+        color: 'text.primary',
+        marginLeft: '20px',
+      }}
     >
       {theme.palette.mode} mode
       <IconButton onClick={colorMode.toggleColorMode} color='inherit'>
@@ -64,9 +68,7 @@ export default function ToggleColorMode() {
           margin='0 auto'
         >
           <Navbar />
-          <Box>
-            <App />
-          </Box>
+          <App />
           <Stack
             direction='row'
             spacing={2}

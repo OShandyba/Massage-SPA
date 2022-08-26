@@ -12,6 +12,13 @@ const MyTypography = styled(Typography)({
     marginLeft: '10px'
 })
 
+const MyAvatar = styled(Avatar)({
+    margin: '10px 30px 10px 10px',
+    height: '100%',
+    width: '100%',
+    borderRadius: '2%',
+})
+
 
 const Feed = () => {
     return (
@@ -21,6 +28,7 @@ const Feed = () => {
             <Stack
                 direction='row'
                 spacing={2}
+
                 sx={{
                     marginRight: '20px',
                     justifyContent: { xs: 'center', sm: 'center', md: 'space-between' }
@@ -31,8 +39,16 @@ const Feed = () => {
                         Массаж имеет благоприятное действие на весь организм человека в целом: повышает мышечный тонус, способствует улучшению циркуляции крови и оттоку лимфы, а это, в свою очередь, снабжает органы питательными веществами, улучшает процессы обмена веществ. Но его эффективность зависит от правильного профессионального подхода в диагностике заболевания, подборе нужной методики, только тогда он принесет максимальный положительный эффект.
                     </MyTypography>
                 </Box>
-                <Box sx={{ maxHeight: '600px', maxWidth: '1000px', display: { xs: 'none', sm: 'none', md: 'block' } }} >
-                    <Avatar alt='thm' src={ImgFeed} sx={{ margin: '10px 30px 10px 10px', height: '100%', width: '100%', borderRadius: '2%', }} />
+                <Box
+                    sx={{
+                        maxHeight: '600px',
+                        maxWidth: '1000px',
+                        display: { xs: 'none', sm: 'none', md: 'block' }
+                    }} >
+                    <MyAvatar
+                        alt='thm'
+                        src={ImgFeed}
+                    />
                 </Box>
             </Stack>
 
@@ -40,11 +56,19 @@ const Feed = () => {
                 direction='row'
                 spacing={2}
                 sx={{
-                    marginRight: '20px',
-                    justifyContent: { xs: 'center', sm: 'center', md: 'space-between', margin: '40px 20px 0 0' }
+                    margin: '40px 20px 0 0',
+                    justifyContent: { xs: 'center', sm: 'center', md: 'space-between' }
                 }} >
-                <Box sx={{ maxHeight: '600px', maxWidth: '1000px', display: { xs: 'none', sm: 'none', md: 'block' } }} >
-                    <Avatar alt='thm' src={ImgFeed1} sx={{ margin: '10px 30px 10px 10px', height: '100%', width: '100%', borderRadius: '2%', }} />
+                <Box
+                    sx={{
+                        maxHeight: '600px',
+                        maxWidth: '1000px',
+                        display: { xs: 'none', sm: 'none', md: 'block' }
+                    }} >
+                    <MyAvatar
+                        alt='thm'
+                        src={ImgFeed1}
+                    />
                 </Box>
                 <Box justifyContent='center'>
                     <MyTypography>
@@ -56,8 +80,8 @@ const Feed = () => {
                 direction='row'
                 spacing={2}
                 sx={{
-                    marginRight: '20px',
-                    justifyContent: { xs: 'center', sm: 'center', md: 'space-between', margin: '40px 20px 10px 0' }
+                    margin: '40px 20px 10px 0',
+                    justifyContent: { xs: 'center', sm: 'center', md: 'space-between' }
                 }} >
 
                 <Box justifyContent='center'>
@@ -65,8 +89,16 @@ const Feed = () => {
                         Массаж лица помогает расслабить мышцы, усилить кровообращение и нормализовать отток жидкостей в теле что в свою очередь поможет предотвратить появление морщин, сохранить овал лица и убрать отёки снять напряжение, поднять настроение и справиться с тревожностью. Как часто делать массаж лица? Оптимально — через день. Курс массажа составляет 6–10 сеансов. При необходимости можно повторить курс через 1–2 месяца.
                     </MyTypography>
                 </Box>
-                <Box sx={{ maxHeight: '600px', maxWidth: '1000px', display: { xs: 'none', sm: 'none', md: 'block' } }} >
-                    <Avatar alt='thm' src={ImgFace} sx={{ margin: '10px 30px 10px 10px', height: '100%', width: '100%', borderRadius: '2%', }} />
+                <Box
+                    sx={{
+                        maxHeight: '600px',
+                        maxWidth: '1000px',
+                        display: { xs: 'none', sm: 'none', md: 'block' }
+                    }} >
+                    <MyAvatar
+                        alt='thm'
+                        src={ImgFace}
+                    />
                 </Box>
             </Stack>
         </Box>
