@@ -36,7 +36,7 @@ const Navbar = () => {
             <AppBar
                 position="sticky"
                 sx={{
-                    bgcolor: '#00cccc',
+                    bgcolor: '#434470',
                     width: '100%'
                 }}>
                 <StyledToolbar>
@@ -46,7 +46,6 @@ const Navbar = () => {
                     <Typography
                         sx={{
                             fontSize: { xs: '0.9rem', sm: '1.25rem' },
-                            color: 'black'
                         }}
                         variant="h6">
                         Массаж в Харькове
