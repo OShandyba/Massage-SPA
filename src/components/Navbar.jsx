@@ -23,7 +23,7 @@ const theme = createTheme({
     breakpoints: {
         values: {
             xs: 0,
-            sm: 360,
+            md: 360,
         },
     },
 });
@@ -45,7 +45,7 @@ const Navbar = () => {
                     </Icon>
                     <Typography
                         sx={{
-                            fontSize: { xs: '0.9rem', sm: '1.25rem' },
+                            fontSize: { xs: '0.9rem', md: '1.25rem' },
                         }}
                         variant="h6">
                         Массаж в Харькове
@@ -61,7 +61,7 @@ const Navbar = () => {
                                 </Icon>
                             </Link>
                             <Link href="https://www.facebook.com/massage.kh.oleg/?ref=pages_you_manage" target='_blank' underline="none">
-                                <Icon sx={{ color: 'blue', height: 30, width: 30 }}>
+                                <Icon sx={{ color: '#0066ff', height: 30, width: 30 }}>
                                     <Facebook sx={{ height: 30, width: 30 }} />
                                 </Icon>
                             </Link>

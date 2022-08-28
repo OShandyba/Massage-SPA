@@ -3,11 +3,12 @@ import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
 import Feed from './components/Feed'
 import Navbar from './components/Navbar'
 import Rightbar from './components/Rightbar'
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import * as React from 'react'
+import ToggleOffIcon from '@mui/icons-material/ToggleOff';
+import ToggleOnIcon from '@mui/icons-material/ToggleOn';
+import NightlightIcon from '@mui/icons-material/Nightlight';
 
 //////////// Dark-Light toggle////////////
 
@@ -29,9 +30,9 @@ function App() {
         marginLeft: '20px',
       }}
     >
-      {theme.palette.mode} mode
+      <NightlightIcon fontSize='medium' />
       <IconButton onClick={colorMode.toggleColorMode} color='inherit'>
-        {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+        {theme.palette.mode === 'dark' ? <ToggleOffIcon fontSize='medium' /> : <ToggleOnIcon fontSize='medium' />}
       </IconButton>
     </Box>
   )
@@ -54,25 +55,22 @@ function ToggleColorMode() {
       createTheme({
         palette: {
           // /////////// Custom dark mode ////////////////
+          mode,
           ...(mode === 'dark' && {
             background: {
-              default: '#222434'
+              default: '#222434',
+              paper: 'rgba(67, 68, 112, 0.8)'
             },
-            palette: {
-              darkRightBar: '#fff'
-            },
+            text: {
+              primary: '#fff'
+            }
           }),
           ...(mode === 'light' && {
             background: {
-              default: '#e6e6ff'
+              default: '#e6e6ff',
+              paper: 'rgba(255, 255, 229, 0.5)'
             }
           }),
-          text: {
-            ...(mode === 'dark' && {
-              primary: '#fff'
-            })
-          },
-
         }
       }),
     [mode],
@@ -86,15 +84,14 @@ function ToggleColorMode() {
           bgcolor='background.default'
           color='text.primary'
           maxWidth='100%'
-          margin='0 auto'
-        >
+          margin='0 auto'>
           <Navbar />
           <App />
           <Stack
             direction='row'
             spacing={2}
             justifyContent='space-between'
-            sx={{ padding: { md: '0 20px 0 100px', sx: '0 20px' } }}>
+            sx={{ padding: { md: '0 30px 0 30px', xs: '0 20px' } }}>
             <Feed />
             <Rightbar />
           </Stack>

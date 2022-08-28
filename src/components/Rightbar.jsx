@@ -1,4 +1,4 @@
-import { Avatar, Box, Stack, styled, Typography } from "@mui/material";
+import { Avatar, Box, Stack, styled, Typography, Paper } from "@mui/material";
 import React from "react";
 import RightBarFotoOne from './img/1.jpg'
 import RightBarFotoTwo from './img/6.jpg'
@@ -11,12 +11,13 @@ const BarImg = styled(Avatar)({
     borderRadius: '2%'
 })
 
-export const BarBackgroundColor = styled(Typography)({
-    borderRadius: '3%',
+export const BarBackgroundColor = styled(Paper)({
     padding: '0 10px 10px 10px',
     marginRight: '10px',
-    backgroundColor: '#434470'
+
 })
+
+
 
 export const Rightbar = () => {
     return (
@@ -24,6 +25,7 @@ export const Rightbar = () => {
             flex={2}
             sx={{
                 display: { xs: 'none', sm: 'block' },
+
             }}>
             <BarBackgroundColor>
                 <Typography
@@ -48,7 +50,7 @@ export const Rightbar = () => {
                     sx={{
                         fontSize: '1.5rem',
                         textAlign: 'center',
-                        marginTop: '20px',
+                        marginTop: '30px',
                     }}>
                     Популярные заказы
                 </Typography>
@@ -62,11 +64,10 @@ export const Rightbar = () => {
                 </Typography>
             </BarBackgroundColor>
             <Stack
-                x={{
+                sx={{
                     maxHeight: '400px',
                     maxWidth: '400px',
-                    margin: '20px 10px 0 0',
-                    alignItems: 'center'
+                    margin: '25px 10px 0 0',
                 }} >
                 <BarImg alt='tmh' src={RightBarFotoOne} />
                 <BarImg alt='tmh' src={RightBarFotoTwo} />
