@@ -24,7 +24,7 @@ export const Rightbar = () => {
         <Box
             flex={2}
             sx={{
-                display: { xs: 'none', sm: 'block' },
+                display: { xs: 'none', sm: 'none', md: 'block' },
 
             }}>
             <BarBackgroundColor>
@@ -32,7 +32,7 @@ export const Rightbar = () => {
                     sx={{
                         fontSize: '1.5rem',
                         textAlign: 'center',
-                        marginTop: '100px',
+                        marginTop: '85px',
                     }}>
                     Акции месяца
                 </Typography>

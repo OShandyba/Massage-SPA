@@ -1,4 +1,4 @@
-import { Avatar, Box, Paper, Stack, styled, Typography } from "@mui/material";
+import { Avatar, Box, Stack, styled, Typography } from "@mui/material";
 import React from "react";
 import ImgFeed from './img/feed-1.jpg'
 import ImgFeed1 from './img/kranio.jpg'
@@ -7,8 +7,8 @@ import ImgFace from './img/face.jpg'
 const MyTypography = styled(Typography)({
     width: '300px',
     paddingTop: '10px',
-    fontSize: '1.2rem',
-    fontWeight: 500,
+    fontSize: '1.1rem',
+    // fontWeight: 500,
     marginLeft: '10px'
 })
 
@@ -25,7 +25,7 @@ const Feed = () => {
         <Box flex={8} >
             <Typography
                 sx={{
-                    fontSize: '2rem',
+                    fontSize: { xs: '1.2rem', sm: '1.2rem', md: '1.5rem' },
                     textAlign: 'center',
                     paddingLeft: { md: '25%', sm: '10%' },
                     margin: '20px'
@@ -38,7 +38,7 @@ const Feed = () => {
                 spacing={2}
 
                 sx={{
-                    marginRight: '20px',
+                    marginRight: { xs: '0', sm: '0', md: '20px' },
                     justifyContent: { xs: 'center', sm: 'center', md: 'space-between' },
                 }} >
 
@@ -51,7 +51,7 @@ const Feed = () => {
                     sx={{
                         maxHeight: '500px',
                         maxWidth: '1000px',
-                        display: { xs: 'none', sm: 'none', md: 'block' }
+                        display: { xs: 'none', sm: 'block', md: 'block' }
                     }} >
                     <MyAvatar
                         alt='thm'
@@ -71,7 +71,7 @@ const Feed = () => {
                     sx={{
                         maxHeight: '430px',
                         maxWidth: '1000px',
-                        display: { xs: 'none', sm: 'none', md: 'block' }
+                        display: { xs: 'none', sm: 'block', md: 'block' }
                     }} >
                     <MyAvatar
                         alt='thm'
@@ -101,7 +101,7 @@ const Feed = () => {
                     sx={{
                         maxHeight: '530px',
                         maxWidth: '1000px',
-                        display: { xs: 'none', sm: 'none', md: 'block' }
+                        display: { xs: 'none', sm: 'block', md: 'block' }
                     }} >
                     <MyAvatar
                         alt='thm'
@@ -109,50 +109,6 @@ const Feed = () => {
                     />
                 </Box>
             </Stack>
-            <Paper
-
-            >
-                <Typography
-                    textAlign='center'
-                    fontSize='2rem'
-                    marginTop='60px'
-                >
-                    Прайс лист
-                </Typography>
-                <Stack
-                    direction={{ md: 'row', xs: 'column' }}
-                    spacing={2}
-                    padding='20px 60px'
-                    marginBottom='50px'
-
-                >
-                    <Typography
-                        maxWidth='700px'
-                        sx={{ fontSize: { md: '1.2rem', sm: '1rem' } }}
-                    >
-                        <p>Моделирующий массаж лица (скульптурирующий)    -    300-60 мин </p><br></br>
-                        <p>Испанский массаж (расслабляющий) общий          -   500-120мин</p> <br></br>
-                        <p>Краниально-сакральная терапия                    -  300-от 30мин </p><br></br>
-                        <p>Антицеллюлитный массаж ручной (бёдра+икры+ягодицы)- 300-60мин</p> <br></br>
-                        <p>Кинезиотейпирование (только в сочетании с массажем)- от 50 </p><br></br>
-                        <p>Массаж шейно-воротниковой зоны                     - 200-30мин </p><br></br>
-                        <p>Классический массаж (спина+ШВЗ)                    - 300-60мин </p><br></br>
-
-                    </Typography>
-                    <Typography
-                        maxWidth='700px'
-                        sx={{ fontSize: { md: '1.2rem', sm: '1rem' } }}
-                    >
-                        <p>Раслабляющий массаж   -  300-60мин </p><br></br>
-                        <p>Лимфодренажный массаж - 500-120мин </p><br></br>
-                        <p>Классический массаж (общий) - 500-120мин </p><br></br>
-                        <p>Остеопатический массаж - 300-от 30мин</p> <br></br>
-                        <p>Массаж стоп - 200-40мин</p> <br></br>
-                        <p>Другие виды массажа </p><br></br>
-
-                    </Typography>
-                </Stack>
-            </Paper>
         </Box >
     )
 }

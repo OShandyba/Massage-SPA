@@ -9,6 +9,7 @@ import * as React from 'react'
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import ToggleOnIcon from '@mui/icons-material/ToggleOn';
 import NightlightIcon from '@mui/icons-material/Nightlight';
+import PriseList from './components/Prise';
 
 //////////// Dark-Light toggle////////////
 
@@ -89,12 +90,13 @@ function ToggleColorMode() {
           <App />
           <Stack
             direction='row'
-            spacing={2}
+            // spacing={2}
             justifyContent='space-between'
             sx={{ padding: { md: '0 30px 0 30px', xs: '0 20px' } }}>
             <Feed />
             <Rightbar />
           </Stack>
+          <PriseList />
         </Box>
       </ThemeProvider>
     </ColorModeContext.Provider>
