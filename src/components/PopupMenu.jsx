@@ -22,8 +22,7 @@ export default function PopupMenu() {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
-                sx={{ padding: '0' }}
-            >
+                sx={{ padding: '0' }}>
                 Прайс
             </Button>
             <Menu
@@ -33,8 +32,7 @@ export default function PopupMenu() {
                 onClose={handleClose}
                 MenuListProps={{
                     'aria-labelledby': 'basic-button',
-                }}
-            >
+                }}>
                 <MenuItem onClick={handleClose}>
                     <PriseList
                         sx={{ maxWidth: '400px' }}

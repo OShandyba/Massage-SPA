@@ -2,15 +2,12 @@ import { Paper, Typography, } from '@mui/material'
 
 export default function PriseList() {
     return (
-
         <Paper
             sx={{
-                margin: { xs: '0 auto', sm: '80px auto 0' },
+                margin: { xs: '0 30px', sm: '80px 30px 0', md: '80px auto 0' },
                 maxWidth: '700px',
                 justifyItems: 'center',
-                // display: { xs: 'none', sm: 'none', md: 'block' }
             }}>
-
             <Typography
                 sx={{
                     display: 'block',
@@ -22,8 +19,7 @@ export default function PriseList() {
             <Typography
                 sx={{
                     paddingLeft: 2,
-                }}
-            >
+                }}>
                 <p>Моделирующий массаж лица (скульптурирующий)-300 - 60 мин </p><br></br>
                 <p>Испанский массаж (расслабляющий) общий - 500 - 120мин</p> <br></br>
                 <p>Краниально-сакральная терапия - 300 - от 30мин </p><br></br>
@@ -41,11 +37,9 @@ export default function PriseList() {
             <Typography
                 display='flex'
                 justifyContent='right'
-                paddingRight={2}
-            >
+                paddingRight={2}>
                 Будте здоровы и красивы!
             </Typography>
-
         </Paper >
     )
 }

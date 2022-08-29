@@ -17,8 +17,6 @@ export const BarBackgroundColor = styled(Paper)({
 
 })
 
-
-
 export const Rightbar = () => {
     return (
         <Box

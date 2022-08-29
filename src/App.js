@@ -85,12 +85,14 @@ function ToggleColorMode() {
           bgcolor='background.default'
           color='text.primary'
           maxWidth='100%'
-          margin='0 auto'>
+          margin='0 auto'
+          justifyContent='space-between'
+        >
           <Navbar />
           <App />
           <Stack
             direction='row'
-            // spacing={2}
+            spacing={3}
             justifyContent='space-between'
             sx={{ padding: { md: '0 30px 0 30px', xs: '0 20px' } }}>
             <Feed />

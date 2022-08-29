@@ -3,7 +3,6 @@ import SpaIcon from '@mui/icons-material/Spa';
 import React from "react";
 import { Facebook, Instagram } from "@mui/icons-material";
 
-
 const StyledToolbar = styled(Toolbar)({
     display: 'flex',
     justifyContent: 'space-between',
@@ -27,7 +26,6 @@ const theme = createTheme({
         },
     },
 });
-
 
 const Navbar = () => {
 
@@ -66,7 +64,6 @@ const Navbar = () => {
                                 </Icon>
                             </Link>
                         </IconBoxNav>
-
                     </SearchBox>
                 </StyledToolbar>
             </AppBar >
