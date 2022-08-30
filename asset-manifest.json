@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/massage-spa/static/js/main.cad85db7.js",
+    "main.js": "/massage-spa/static/js/main.3a682527.js",
     "static/media/kranio.jpg": "/massage-spa/static/media/kranio.acfb4c1534aa20c4b853.jpg",
     "static/media/face.jpg": "/massage-spa/static/media/face.969c13a35078ab1f22b6.jpg",
     "static/media/feed-1.jpg": "/massage-spa/static/media/feed-1.2914132a2870afbab29c.jpg",
@@ -8,9 +8,9 @@
     "static/media/1.jpg": "/massage-spa/static/media/1.17e970d467cc404908d4.jpg",
     "static/media/7.jpg": "/massage-spa/static/media/7.b39de770ce9f23ced08d.jpg",
     "index.html": "/massage-spa/index.html",
-    "main.cad85db7.js.map": "/massage-spa/static/js/main.cad85db7.js.map"
+    "main.3a682527.js.map": "/massage-spa/static/js/main.3a682527.js.map"
   },
   "entrypoints": [
-    "static/js/main.cad85db7.js"
+    "static/js/main.3a682527.js"
   ]
 }
