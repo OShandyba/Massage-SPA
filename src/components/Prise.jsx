@@ -4,7 +4,7 @@ export default function PriseList() {
     return (
         <Paper
             sx={{
-                margin: { xs: '0 30px', sm: '80px 30px 0', md: '80px auto 0' },
+                margin: { xs: '40px 20px 0', sm: '80px 20px 0', md: '80px auto 0' },
                 maxWidth: '700px',
                 justifyItems: 'center',
             }}>

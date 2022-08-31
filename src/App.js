@@ -41,7 +41,7 @@ function App() {
 
 
 function ToggleColorMode() {
-  const [mode, setMode] = React.useState('light');
+  const [mode, setMode] = React.useState('dark');
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -68,8 +68,8 @@ function ToggleColorMode() {
           }),
           ...(mode === 'light' && {
             background: {
-              default: '#e6e6ff',
-              paper: 'rgba(255, 255, 229, 0.5)'
+              default: '#E0BBCC',
+              paper: 'rgba(112, 94, 140, 0.5)'
             }
           }),
         }

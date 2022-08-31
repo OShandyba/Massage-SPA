@@ -63,7 +63,7 @@ export const Rightbar = () => {
             </BarBackgroundColor>
             <Stack
                 sx={{
-                    maxHeight: '400px',
+                    maxHeight: '300px',
                     maxWidth: '400px',
                     margin: '25px 10px 0 0',
                 }} >
