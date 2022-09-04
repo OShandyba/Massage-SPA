@@ -30,7 +30,7 @@ export const Rightbar = () => {
                     sx={{
                         fontSize: '1.5rem',
                         textAlign: 'center',
-                        marginTop: '85px',
+                        marginTop: '65px',
                     }}>
                     Акции месяца
                 </Typography>
